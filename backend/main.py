@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import os
 import re
 import logging
@@ -6,7 +9,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from .routers import upload, jobs, progress, results, retry, export
+from backend.routers import upload, jobs, progress, results, retry, export
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

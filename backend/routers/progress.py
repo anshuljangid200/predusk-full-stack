@@ -5,9 +5,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from ..database import get_db
-from ..models import Document
-from ..redis_client import get_redis_client
+from backend.database import get_db
+from backend.models import Document
+from backend.redis_client import get_redis_client
 
 router = APIRouter()
 logger = logging.getLogger(__name__)

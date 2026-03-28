@@ -5,10 +5,10 @@ from datetime import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 
-from .celery_app import celery_app
-from .redis_client import publish_progress
-from .database import DATABASE_URL
-from .models import Document, JobResult
+from backend.celery_app import celery_app
+from backend.redis_client import publish_progress
+from backend.database import DATABASE_URL
+from backend.models import Document, JobResult
 
 logger = logging.getLogger(__name__)
 

@@ -3,9 +3,9 @@ from fastapi import APIRouter, Depends, Query, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, desc, asc, func
 from pydantic import BaseModel
-from ..database import get_db
-from ..models import Document, JobResult
-from ..schemas import DocumentListItem, JobDetailResponse
+from backend.database import get_db
+from backend.models import Document, JobResult
+from backend.schemas import DocumentListItem, JobDetailResponse
 
 router = APIRouter()
 

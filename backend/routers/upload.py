@@ -2,10 +2,10 @@ import base64
 from typing import List
 from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-from ..database import get_db
-from ..models import Document
-from ..schemas import DocumentResponse
-from ..worker import process_document
+from backend.database import get_db
+from backend.models import Document
+from backend.schemas import DocumentResponse
+from backend.worker import process_document
 
 router = APIRouter()
 
