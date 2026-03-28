@@ -35,10 +35,12 @@ services:
           type: redis
           property: connectionString
 
+  - type: redis
+    name: doc-processor-redis
+    ipAllowList: []
+    plan: free
+
 databases:
   - name: doc-processor-db
     databaseName: docprocessor
     user: docprocessor
-
-  - name: doc-processor-redis
-    type: redis
