@@ -2,7 +2,7 @@ services:
   - type: web
     name: doc-processor-api
     env: python
-    buildCommand: pip install -r backend/requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r backend/requirements.txt
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
@@ -22,7 +22,7 @@ services:
   - type: worker
     name: doc-processor-worker
     env: python
-    buildCommand: pip install -r backend/requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r backend/requirements.txt
     startCommand: celery -A backend.celery_app worker --loglevel=info --concurrency=2
     envVars:
       - key: DATABASE_URL
