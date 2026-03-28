@@ -1,0 +1,8 @@
+﻿npx : 'next' is not recognized as an internal or external command,
+At line:1 char:1
++ npx next build > build_output.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ('next' is not r...ternal command,:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+operable program or batch file.
