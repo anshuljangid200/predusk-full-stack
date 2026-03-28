@@ -34,6 +34,8 @@ services:
           name: doc-processor-redis
           type: redis
           property: connectionString
+      - key: PYTHON_VERSION
+        value: 3.11.0
 
   - type: redis
     name: doc-processor-redis
